@@ -1,0 +1,26 @@
+largest = None
+smallest = None
+the_list = []
+
+while True:
+    num = input("Enter number:")
+    if num == "done":break
+    if len(num) < 1: break
+    try:
+        number = int(num)
+        the_list.append(number)
+    except:
+        print("Invalid input")
+
+largest = number
+for the_num in the_list:
+    if the_num > largest:
+        largest = the_num
+        
+smallest = number
+for value in the_list:
+    if value < smallest:
+        smallest = value
+        
+print("Maximum is", largest)
+print("Minimum is", smallest)
